@@ -1,0 +1,33 @@
+# Compiled codes
+build/
+dist/
+*.wast
+
+# IDE's
+.vscode
+.idea
+*.iml
+
+# Dependency directories
+node_modules
+*.log
+
+# Desktop Services Store on macOS
+.DS_Store
+
+# Temp
+temp
+.mongo-data
+.pgsql-data
+
+# database data
+.dbdata/
+
+# wallet keys
+keys
+
+# netlify cli
+.netlify/
+
+
+__docs
