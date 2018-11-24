@@ -11,12 +11,10 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
-      DB_NAME: eosrate
+      DB_NAME: eosgreetings
       DB_USER: user
       DB_PASSWORD: pass
-      POSTGRES_DB: eosrate
-    networks:
-      eosrate:
+      POSTGRES_DB: eosgreetings
 
   pgweb:
     image: sosedoff/pgweb:latest
@@ -24,21 +22,17 @@ services:
     ports:
       - "8082:8081"
     environment:
-      DATABASE_URL: postgres://user:pass@postgres:5432/eosrate?sslmode=disable
+      DATABASE_URL: postgres://user:pass@postgres:5432/eosgreetings?sslmode=disable
     depends_on:
       - postgres
-    networks:
-      eosrate:
 
   flyway:
     image: boxfuse/flyway:5.2.1
-    command: -url=jdbc:postgresql://postgres:5432/eosrate -user=user -password=pass -connectRetries=60 migrate
+    command: -url=jdbc:postgresql://postgres:5432/eosgreetings -user=user -password=pass -connectRetries=60 migrate
     volumes:
       - ./services/postgres/migrations:/flyway/sql
     depends_on:
       - postgres
-    networks:
-      eosrate:
 
   demux:
     build:
@@ -46,7 +40,7 @@ services:
       dockerfile: ./Dockerfile
       args:
         SERVICE: 'demux'
-    image: eosrate/demux
+    image: eosgreetings/demux
     volumes:
       - ./services/demux:/opt/application  # mount demux service folder
       - /opt/application/node_modules # prevents host/container conflicts
@@ -56,19 +50,20 @@ services:
       DB_USER: user
       DB_PASSWORD: pass
       DB_PORT: 5432
-      DB_NAME: eosrate
+      DB_NAME: eosgreetings
       DB_HOST: postgres
       DB_SCHEMA: public
-      CHAIN_HOST: 'http://127.0.0.1:8888'
+      CHAIN_HOST: 'http://eosio:8888'
       CHAIN_INIT_BLOCK: 10
-      MONGO_URI: 'mongodb://127.0.0.1:27017'
+      MONGO_URI: 'mongodb://mongo:27017'
       MONGO_DB: EOSFN
-      WAIT_HOSTS: postgres:5432, 127.0.0.1:27017
+      WAIT_HOSTS: postgres:5432, mongo:27017
       WAIT_HOSTS_TIMEOUT: 60
     ports:
       - '3030:3030'
     networks:
-      eosrate:
+      default:
+      eoslocal:
 
   hasura:
     image: hasura/graphql-engine:v1.0.0-alpha30.cli-migrations
@@ -78,7 +73,7 @@ services:
     - postgres
     restart: always
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://user:pass@postgres:5432/eosrate?sslmode=disable
+      HASURA_GRAPHQL_DATABASE_URL: postgres://user:pass@postgres:5432/eosgreetings?sslmode=disable
       HASURA_GRAPHQL_MIGRATIONS_DIR: /hasura-migrations
     volumes:
       - ./services/hasura/migrations:/hasura-migrations  #  mount hasura migrations folder
@@ -86,9 +81,10 @@ services:
       - graphql-engine
       - serve
       - --enable-console
-    networks:
-      eosrate:
 
 networks:
-  eosrate:
-    name: eosrate
+  default:
+    name: eosgreetings
+  eoslocal:
+    external: true
+

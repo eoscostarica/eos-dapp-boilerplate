@@ -29,5 +29,5 @@ keys
 # netlify cli
 .netlify/
 
-
+# docs for development
 __docs

@@ -98,8 +98,12 @@ At least 10GB RAM (Docker -> Preferences -> Advanced -> Memory -> 10GB or above)
 
 ## Commands
 
-- `docker-compose build` contruye los contenedores
+- `make start` starts all containers and the reactjs app.
+- `make deploy-contracts` compiles and redeploys all contracts ( wip ).
+- `make flush` stops and removes all cotainers and data.
+- `docker-compose build`  build all containers,
 - `docker-compose up` starts all containers.
+- `docker-compose up --build` rebuilds and starts all containers.
 - `docker-compose exec [service_name] [bash | sh]` open bash or sh in a container.
 - `docker-compose stop` stops all containers.
 - `docker-compose down` stops and removes all containers.
