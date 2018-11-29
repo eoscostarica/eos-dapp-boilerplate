@@ -5,7 +5,7 @@ services:
   postgres:
     image: postgres:10.4
     volumes:
-      - ./services/postgres/.dbdata/.pgsql-data:/var/lib/postgresql/data
+      - postgres-data-volume:/var/lib/postgresql/data
     ports:
       - '5432:5432'
     environment:
@@ -81,6 +81,9 @@ services:
       - graphql-engine
       - serve
       - --enable-console
+
+volumes:
+  postgres-data-volume:
 
 networks:
   default:
