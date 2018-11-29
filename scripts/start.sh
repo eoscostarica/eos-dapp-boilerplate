@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "Building postgres docker volume"
+docker volume create --name=postgres-data-volume
+
 echo "Starting docker containers"
 docker-compose up -d
 
