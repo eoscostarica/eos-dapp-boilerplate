@@ -254,7 +254,17 @@ In the services/frontend folder you will find a production ready frontend with S
 This frontend application uses Materail UI, this UI framework will allow you to build maintainable, scalable web and mobile interfaces.
 
 <p align="center">
-	<img src="docs/react-client.png" width="600">
+	<a href="https://www.youtube.com/watch?v=m1diVY4Uzjc">
+		<img src="https://monosnap.com/image/KgKSu742SYRRC27HojRPvva5TlMu8j.png" width="600">
+	</a>
+</p>
+
+### Material UI
+
+<p align="center">
+	<a href="https://www.youtube.com/watch?v=Akfp2X5QUXs">
+		<img src="https://monosnap.com/image/NkiUDQ8CWcsthdPG7s7WTom3oneUMQ.png" width="600">
+	</a>
 </p>
 
 #### components
