@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Flushing all blockchain and databases data"
+echo "Flushing all docker containers and volumes"
 docker-compose down -v
