@@ -5,7 +5,7 @@ services:
   postgres:
     image: postgres:10.4
     volumes:
-      - postgres-data-volume:/var/lib/postgresql/data
+      - dapp-postgres-data-volume:/var/lib/postgresql/data
     ports:
       - '5432:5432'
     environment:
@@ -83,7 +83,7 @@ services:
       - --enable-console
 
 volumes:
-  postgres-data-volume:
+  dapp-postgres-data-volume:
 
 networks:
   default:
