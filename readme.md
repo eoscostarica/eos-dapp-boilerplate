@@ -14,10 +14,10 @@
 	</a>
 </p>
 
-# EOS Dapp Boilerplate
+# EOSIO Dapp Boilerplate
 
-This boilerplate provides a very quick way to get started with application development on the EOS platform.
-It's an opinioned selection of technologies that will allow you to build performant and scalable EOS dApps. 
+This boilerplate provides a very quick way to get started with application development on the EOSIO platform.
+It's an opinioned selection of technologies that will allow you to build performant and scalable EOSIO dApps. 
 
 You can configure the project to use any testnet for development, if you are interested in running all eosio services in your machine take a look at [EOS Local](https://github.com/eoscostarica/eos-local).  
 
