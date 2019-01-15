@@ -268,7 +268,7 @@ This frontend application uses Materail UI, this UI framework will allow you to 
 
 ## Continuous Integration Process
 
-- [TravisCI](https://travis-ci.org/) to run test and code style checks.  We are planning on moving to Circle CI https://github.com/eoscostarica/eos-local/projects/3.
+- [TravisCI](https://travis-ci.org/) to run test and code style checks.
 - [Netlify](https://netlify.com) for continuous delivery and creation of ephemeral test environments.
 
 ## EOS Documentation & Learning Resources
