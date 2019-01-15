@@ -38,13 +38,12 @@ This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
   - [graphql](#graphql)
     - [hasura](#hasura)
   - [postgres](#postgres)
-  - [flyway](#flyway)
   - [pgweb](#pgweb)
   - [reactjs web client](#reactjs-web-client)
+  - [Material UI](#material-ui)
     - [components](#components)
 - [Continuous Integration Process](#continuous-integration-process)
-- [EOS Documentation & Resources](#eos-documentation--resources)
-- [Awesome Lists](#awesome-lists)
+- [EOS Documentation & Learning Resources](#eos-documentation--learning-resources)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Why Containers ?](#why-containers-)
   - [Why Database Migrations ?](#why-database-migrations-)
@@ -69,6 +68,7 @@ This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
 - Out-of-box services: 
   - Demux service for executing side effects and data replication to postgres. 
   - GraphQL endpoint with Hasura for executing complex data queries with ease.
+  - PGWeb instance for exploring the demux postgres database.
   - Postgres database for the dApp data.
   - Reactjs client with:
     - Scatter integration. 
@@ -90,6 +90,7 @@ Basic knowledge about Docker, Docker Compose, EOSIO and NodeJS is required.
 
 - Docker https://docs.docker.com/install/.   
 At least 6GB RAM (Docker -> Preferences -> Advanced -> Memory -> 6GB or above)
+- Hasura CLI https://docs.hasura.io/1.0/graphql/manual/hasura-cli/install-hasura-cli.html
 
 **Optionally**
 - Install node.js v11 on your machine. We recommend using [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm), and [avn](https://github.com/wbyoung/avn) to manage multiple node.js versions on your computer.
@@ -115,7 +116,7 @@ See the full list here https://docs.docker.com/compose/reference/
 ```
 .
 ├── docs/ .............................................. documentation files and media
-├── contracts/ ......................................... eos smart contracts 
+├── contracts/ ......................................... eosio smart contracts 
 ├── services/ .......................................... microservices
 |   ├── demux/ ......................................... demux-js service
 |   |   ├── utils/ ..................................... general utilities
@@ -126,11 +127,9 @@ See the full list here https://docs.docker.com/compose/reference/
 |   |   ├── tslint.json ................................ code style rules
 |   |   └── package.json ............................... service dependencies manifest
 |   |
-|   ├── postgres/ ...................................... postgres db service
-|   |   └── migrations/ ................................ flyway migrations
-|   |
 |   ├── hasura/ ........................................ graphql endpoint service
-|   |   └── migrations/ ................................ hasura migrations
+|   |   ├── migrations/ ................................ hasura postgres migrations
+|   |   └── config.yaml ................................ hasura config file
 |   |
 |   └── frontend/ ...................................... reactjs frontend
 |       ├── public/ .................................... static and public files
@@ -339,7 +338,7 @@ Please report bugs big and small by [opening an issue](https://github.com/eoscos
 
 We challenge ourselves to provide the EOS platform with a strong geographical and political diversity by running the most robust EOS Block Producer possible from Costa Rica; We pledge to leverage our talent, experience, and sustainable internet resources to meet such an important challenge.
 
-EOS Costa Rica supports the EOS.io community by maintaining and contributing to open source initiatives, meetups and workshops.
+EOS Costa Rica supports the EOSIO community by maintaining and contributing to open source initiatives, meetups and workshops.
 
 [eoscostarica.io](https://eoscostarica.io)
 

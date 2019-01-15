@@ -1,0 +1,17 @@
+- args:
+    cascade: false
+    sql: |
+      CREATE TABLE greetings (
+        id SERIAL PRIMARY KEY,
+        greeting TEXT NOT NULL,
+        created_at TIMESTAMP NOT NULL,
+        block BIGINT NOT NULL,
+        tx TEXT NOT NULL,
+        created_by TEXT NOT NULL,
+        demux_created_at TIMESTAMP DEFAULT current_timestamp NOT NULL
+      );
+  type: run_sql
+- args:
+    name: greetings
+    schema: public
+  type: add_existing_table_or_view
