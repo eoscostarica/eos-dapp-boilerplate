@@ -17,6 +17,7 @@
 # EOSIO Dapp Boilerplate
 
 This boilerplate provides a very quick way to get started with application development on the EOSIO platform.
+
 It's an opinioned selection of technologies that will allow you to build performant and scalable EOSIO dApps. 
 
 You can configure the project to use any testnet for development, if you are interested in running all eosio services in your machine take a look at [EOS Local](https://github.com/eoscostarica/eos-local).  
@@ -69,8 +70,6 @@ This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
   - Demux service for executing side effects and data replication to postgres. 
   - GraphQL endpoint with Hasura for executing complex data queries with ease.
   - Postgres database for the dApp data.
-  - PGWeb instance for exploring the postgres database.
-  - Flyway service for Postgres DB migrations.
   - Reactjs client with:
     - Scatter integration. 
     - Lynx integration. WIP
@@ -85,12 +84,12 @@ This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
 
 ## Getting started
 
-Basic knowledge about Docker, Docker Compose, EOS and NodeJS is required.
+Basic knowledge about Docker, Docker Compose, EOSIO and NodeJS is required.
 
 **Global Dependencies**
 
 - Docker https://docs.docker.com/install/.   
-At least 10GB RAM (Docker -> Preferences -> Advanced -> Memory -> 10GB or above)
+At least 6GB RAM (Docker -> Preferences -> Advanced -> Memory -> 6GB or above)
 
 **Optionally**
 - Install node.js v11 on your machine. We recommend using [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm), and [avn](https://github.com/wbyoung/avn) to manage multiple node.js versions on your computer.
@@ -227,16 +226,6 @@ PostgreSQL is a powerful, open source object-relational database system with ove
 
 Learn more at https://www.postgresql.org
 
-### flyway
-
-Flyway is an open-source database migration tool. It strongly favors simplicity and convention over configuration.
-It is based around just 7 basic commands: Migrate, Clean, Info, Validate, Undo, Baseline and Repair.
-EOS Local leverages Flyway to manage the Postgres database migrations.
-
-Learn more at https://flywaydb.org/documentation/migrations & https://flywaydb.org/documentation/videos
-
-Note: we are considering using hasura for all db migrations, see https://github.com/eoscostarica/eos-dapp-boilerplate/issues/2
-
 ### pgweb
 
 Pgweb is a web-based database browser for PostgreSQL, written in Go and works on OSX, Linux and Windows machines. Main idea behind using Go for backend development is to utilize ability of the compiler to produce zero-dependency binaries for multiple platforms. Pgweb was created as an attempt to build very simple and portable application to work with local or remote PostgreSQL databases.
@@ -282,27 +271,10 @@ This frontend application uses Materail UI, this UI framework will allow you to 
 - [TravisCI](https://travis-ci.org/) to run test and code style checks.  We are planning on moving to Circle CI https://github.com/eoscostarica/eos-local/projects/3.
 - [Netlify](https://netlify.com) for continuous delivery and creation of ephemeral test environments.
 
-## EOS Documentation & Resources
+## EOS Documentation & Learning Resources
 
-- https://developers.eos.io  
-- https://github.com/EOSIO/eosio.contracts 
-- https://github.com/slowmist/eos-smart-contract-security-best-practices    
-- https://github.com/eosforks 
-- https://learn.eoscostarica.io    
-- https://nadejde.github.io/eos-token-sale    
-- https://docs.docker.com/kitematic/userguide    
-
-## Awesome Lists
-
-- https://github.com/EOS-Nation/Awesome-EOS
-- https://github.com/DanailMinchev/awesome-eosio
-- https://github.com/kesar/eos-awesome-contracts/
-- https://github.com/veggiemonk/awesome-docker
-- https://github.com/dhamaniasad/awesome-postgres
-- https://github.com/ramnes/awesome-mongodb
-- https://github.com/enaqx/awesome-react
-- https://github.com/jaredpalmer/awesome-react-render-props
-- https://github.com/chentsulin/awesome-graphql
+- https://developers.eos.io
+- https://learn.eoscostarica.io
 
 ## Frequently Asked Questions
 
