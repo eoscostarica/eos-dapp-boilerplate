@@ -99,8 +99,9 @@ At least 6GB RAM (Docker -> Preferences -> Advanced -> Memory -> 6GB or above)
 ## Commands
 
 - `make start` starts all containers and the reactjs app.
-- `make deploy-contracts` compiles and redeploys all contracts ( wip ).
 - `make flush` stops and removes all cotainers and data.
+- `make hasura` open the hasura console on the browser.
+- `make migrate` runs hasura migration against the postgres database.
 - `docker-compose build`  build all containers,
 - `docker-compose up` starts all containers.
 - `docker-compose up --build` rebuilds and starts all containers.
