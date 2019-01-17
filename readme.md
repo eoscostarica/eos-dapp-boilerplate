@@ -16,11 +16,9 @@
 
 # EOSIO Dapp Boilerplate
 
-This boilerplate provides a very quick way to get started with application development on the EOSIO platform.
-
 It's an opinioned selection of technologies that will allow you to build performant and scalable EOSIO dApps. 
 
-You can configure the project to use any testnet for development, if you are interested in running all eosio services in your machine take a look at [EOS Local](https://github.com/eoscostarica/eos-local).  
+You can configure the project to connect testnet. If you are interested in running an eosio local node in your machine take a look at [EOS Local](https://github.com/eoscostarica/eos-local).  
 
 This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
 
@@ -47,7 +45,6 @@ This project was inspired on MonsterEOS' **EOSIO Dream Stack** architecture.
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Why Containers ?](#why-containers-)
   - [Why Database Migrations ?](#why-database-migrations-)
-  - [Who is using EOS Local ?](#who-is-using-eos-local-)
 - [Contributing](#contributing)
 - [About EOS Costa Rica](#about-eos-costa-rica)
 - [License](#license)
@@ -307,22 +304,9 @@ Learn more at https://cloud.google.com/containers/
 
 Learn more at https://dev.to/pesse/one-does-not-simply-update-a-database--migration-based-database-development-527d
 
-### Who is using EOS Local ?
-
-- [BeSpiral](http://bespiral.com).
-- [EOS Rate](https://rate.eoscostarica.io).
-- [DMeetup](https://github.com/eoscostarica/dmeetup).
-- Add your project by creating a pull request.
-
 ## Contributing
 
 We use a Kanban-style board. That's were we prioritize the work. [Go to Project Board](https://github.com/eoscostarica/eos-local/projects/3).
-
-<p align="center">
-	<img src="docs/project-board.png" width="600">
-</p>
-
-The main communication channels are [github issues](https://github.com/eoscostarica/eos-local/issues) and [EOS Costa Rica's Discord server](https://eoscostarica.io/discord). Feel to join and ask as many questions you may have.
 
 Our weekly sync call is every Monday 1:00 AM UTC. [meet.eoscostarica.io](https:/meet.eoscostarica.io).
 
@@ -337,9 +321,7 @@ Please report bugs big and small by [opening an issue](https://github.com/eoscos
 	</a>
 </p>
 
-We challenge ourselves to provide the EOS platform with a strong geographical and political diversity by running the most robust EOS Block Producer possible from Costa Rica; We pledge to leverage our talent, experience, and sustainable internet resources to meet such an important challenge.
-
-EOS Costa Rica supports the EOSIO community by maintaining and contributing to open source initiatives, meetups and workshops.
+EOS Costa Rica is an independently-owned, self-funded, bare-metal genesis block producer that provides stable and secure infrastructure for EOSIO blockchains. We support open source software for our community while offering enterprise solutions and custom smart contract development for our clients.
 
 [eoscostarica.io](https://eoscostarica.io)
 
