@@ -47,18 +47,15 @@ services:
       DB_SCHEMA: public
       CHAIN_HOST: 'http://eosio:8888'
       CHAIN_INIT_BLOCK: 10
-      MONGO_URI: 'mongodb://mongo:27017'
-      MONGO_DB: EOSFN
-      WAIT_HOSTS: postgres:5432, mongo:27017
+      MONGO_URI: "mongodb://190.10.8.205:27017"
+      MONGO_DB: EOS
+      WAIT_HOSTS: postgres:5432
       WAIT_HOSTS_TIMEOUT: 60
     ports:
       - '3030:3030'
-    networks:
-      default:
-      eoslocal:
 
   hasura:
-    image: hasura/graphql-engine:v1.0.0-alpha34
+    image: hasura/graphql-engine:v1.0.0-alpha37.cli-migrations
     ports:
     - '8088:8080'
     depends_on:
@@ -80,6 +77,3 @@ volumes:
 networks:
   default:
     name: eosgreetings
-  eoslocal:
-    external: true
-
